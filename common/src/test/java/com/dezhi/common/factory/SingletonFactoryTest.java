@@ -1,6 +1,5 @@
-package com.dezhi.rpc;
+package com.dezhi.common.factory;
 
-import com.dezhi.common.factory.SingletonFactory;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

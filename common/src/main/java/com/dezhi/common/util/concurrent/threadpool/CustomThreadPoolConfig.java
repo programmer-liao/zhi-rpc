@@ -1,4 +1,4 @@
-package com.dezhi.common.utils.concurrent.threadpool;
+package com.dezhi.common.util.concurrent.threadpool;
 
 import lombok.Getter;
 import lombok.Setter;

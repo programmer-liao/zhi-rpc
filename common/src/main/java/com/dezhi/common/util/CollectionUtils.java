@@ -1,4 +1,4 @@
-package com.dezhi.common.util.concurrent;
+package com.dezhi.common.util;
 
 import java.util.Collection;
 

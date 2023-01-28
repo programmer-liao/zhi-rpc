@@ -1,6 +1,5 @@
 package com.dezhi.common.util;
 
-import com.dezhi.common.util.concurrent.CollectionUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

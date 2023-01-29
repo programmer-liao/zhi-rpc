@@ -139,12 +139,14 @@ public class ThreadPoolFactoryUtils {
     public static void printThreadPoolStatus(ThreadPoolExecutor threadPool) {
         ScheduledThreadPoolExecutor scheduledExecutorService = new ScheduledThreadPoolExecutor(1, createThreadFactory("print-thread-pool-status", false));
         scheduledExecutorService.scheduleAtFixedRate(() -> {
-            log.info("============ThreadPool Status=============");
-            log.info("ThreadPool Size: [{}]", threadPool.getPoolSize());
-            log.info("Active Threads: [{}]", threadPool.getActiveCount());
-            log.info("Number of Tasks : [{}]", threadPool.getCompletedTaskCount());
-            log.info("Number of Tasks in Queue: {}", threadPool.getQueue().size());
-            log.info("===========================================");
+            synchronized (ThreadPoolExecutor.class) {
+                log.info("============ThreadPool Status=============");
+                log.info("ThreadPool Size: [{}]", threadPool.getPoolSize());
+                log.info("Active Threads: [{}]", threadPool.getActiveCount());
+                log.info("Number of Tasks : [{}]", threadPool.getCompletedTaskCount());
+                log.info("Number of Tasks in Queue: {}", threadPool.getQueue().size());
+                log.info("===========================================");
+            }
         }, 0, 1, TimeUnit.SECONDS);
     }
 }

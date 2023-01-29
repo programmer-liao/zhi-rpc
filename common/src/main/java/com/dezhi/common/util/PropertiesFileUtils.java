@@ -4,9 +4,13 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
+import java.net.URISyntaxException;
 import java.net.URL;
+import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Properties;
 
@@ -24,12 +28,20 @@ public class PropertiesFileUtils {
      * @return Properties对象
      */
     public static Properties readPropertiesFile(String fileName) {
-        // 得到当前类路径的绝对地址的URL
-        URL url = Thread.currentThread().getContextClassLoader().getResource("");
+        // 得到当前类路径resources的绝对地址的URL
+        URL url = Thread.currentThread().getContextClassLoader().getResource("");;
         String rpcConfigPath = "";
         // 得到fileName的绝对路径
         if (url != null) {
-            rpcConfigPath = url.getPath() + fileName;
+            String path = null;
+            try {
+                // url路径存在中文时, 中文会转换成url编码, 因此先对路径进行解码
+                path = URLDecoder.decode(url.getPath(), "UTF-8");
+            } catch (UnsupportedEncodingException e) {
+                log.error("读取 [{}] 时发生异常", fileName);
+            }
+            // windows下,去除路径前面的"/"
+            rpcConfigPath = (path + fileName).substring(1);
         }
         Properties properties = null;
         // 将配置文件中的内容加载进Properties集合中

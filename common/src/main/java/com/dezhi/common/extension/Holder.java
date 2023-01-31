@@ -16,7 +16,7 @@ public class Holder<T> {
      * 获取value
      * @return value
      */
-    private T get() {
+    T get() {
         return value;
     }
 

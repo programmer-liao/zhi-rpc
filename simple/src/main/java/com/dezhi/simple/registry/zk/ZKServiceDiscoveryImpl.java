@@ -1,10 +1,11 @@
-package com.dezhi.simple.registry;
+package com.dezhi.simple.registry.zk;
 
 import com.dezhi.common.enums.RpcErrorMessageEnum;
 import com.dezhi.common.exception.RpcException;
 import com.dezhi.common.extension.ExtensionLoader;
 import com.dezhi.common.util.CollectionUtils;
 import com.dezhi.simple.loadbalance.LoadBalance;
+import com.dezhi.simple.registry.ServiceDiscovery;
 import com.dezhi.simple.registry.zk.util.CuratorUtils;
 import com.dezhi.simple.remoting.dto.RpcRequest;
 import lombok.extern.slf4j.Slf4j;

@@ -57,6 +57,8 @@ public class RpcConstants {
 
     public static final String PING = "ping";
 
+    public static final String PONG = "pong";
+
     /**
      * 最大帧长度
      */

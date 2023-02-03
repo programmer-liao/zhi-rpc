@@ -1,10 +1,19 @@
 package com.dezhi.simple.remoting.dto;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 /**
  * Rpc消息格式
  * @author liaodezhi
  * @date 2023/2/3
  */
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class RpcMessage {
 
     /**

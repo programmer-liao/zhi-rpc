@@ -3,6 +3,7 @@ package com.dezhi.simple.config;
 import com.dezhi.common.util.concurrent.threadpool.ThreadPoolFactoryUtils;
 import com.dezhi.simple.registry.zk.util.CuratorUtils;
 import com.dezhi.simple.remoting.transport.netty.server.NettyRpcServer;
+import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 
 import java.net.InetAddress;
@@ -22,6 +23,13 @@ public class CustomShutdownHook {
      */
     private static final CustomShutdownHook CUSTOM_SHUTDOWN_HOOK = new CustomShutdownHook();
 
+    /**
+     * 获取Custom_SHUTDOWN_HOOK
+     * @return Custom_SHUTDOWN_HOOK
+     */
+    public static CustomShutdownHook getCustomShutdownHook() {
+        return CUSTOM_SHUTDOWN_HOOK;
+    }
     /**
      * 清除所有的服务节点
      */

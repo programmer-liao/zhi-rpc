@@ -107,7 +107,7 @@ public class ThreadPoolFactoryUtils {
     /**
      * 关闭所有线程池
      */
-    public static void showDownAllThreadPool() {
+    public static void shutDownAllThreadPool() {
         log.info("调用 shutDownAllThreadPool 方法");
         // 开始关闭所有线程池
         THREAD_POOLS.entrySet().parallelStream().forEach(entry -> {

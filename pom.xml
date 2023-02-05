@@ -27,6 +27,7 @@
         <curator-version>4.2.0</curator-version>
         <netty.version>4.1.42.Final</netty.version>
         <kryo.version>4.0.2</kryo.version>
+        <hessian.version>4.0.65</hessian.version>
     </properties>
     <dependencies>
         <!-- lombok -->
@@ -93,6 +94,12 @@
             <groupId>com.esotericsoftware</groupId>
             <artifactId>kryo</artifactId>
             <version>${kryo.version}</version>
+        </dependency>
+        <!-- hessian -->
+        <dependency>
+            <groupId>com.caucho</groupId>
+            <artifactId>hessian</artifactId>
+            <version>${hessian.version}</version>
         </dependency>
     </dependencies>
 

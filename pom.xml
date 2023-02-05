@@ -26,6 +26,7 @@
         <spring.version>5.2.7.RELEASE</spring.version>
         <curator-version>4.2.0</curator-version>
         <netty.version>4.1.42.Final</netty.version>
+        <kryo.version>4.0.2</kryo.version>
     </properties>
     <dependencies>
         <!-- lombok -->
@@ -71,7 +72,7 @@
             <artifactId>spring-context</artifactId>
             <version>${spring.version}</version>
         </dependency>
-        <!--zookeeper-->
+        <!-- zookeeper -->
         <dependency>
             <groupId>org.apache.curator</groupId>
             <artifactId>curator-framework</artifactId>
@@ -86,6 +87,12 @@
             <groupId>io.netty</groupId>
             <artifactId>netty-all</artifactId>
             <version>${netty.version}</version>
+        </dependency>
+        <!-- kyro -->
+        <dependency>
+            <groupId>com.esotericsoftware</groupId>
+            <artifactId>kryo</artifactId>
+            <version>${kryo.version}</version>
         </dependency>
     </dependencies>
 

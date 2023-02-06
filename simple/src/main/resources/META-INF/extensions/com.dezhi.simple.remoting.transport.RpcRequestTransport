@@ -1,0 +1,2 @@
+netty=com.dezhi.simple.remoting.transport.netty.client.NettyRpcClient
+socket=com.dezhi.simple.remoting.transport.socket.SocketRpcClient

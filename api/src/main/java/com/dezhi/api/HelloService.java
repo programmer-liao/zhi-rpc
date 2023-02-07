@@ -1,4 +1,4 @@
-package com.dezhi.api.serviceimpl;
+package com.dezhi.api;
 
 /**
  * Hello接口

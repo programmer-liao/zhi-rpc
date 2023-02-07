@@ -1,4 +1,4 @@
-package com.dezhi.api.serviceimpl;
+package com.dezhi.api;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -28,7 +28,7 @@ public class CustomScannerRegistrar implements ImportBeanDefinitionRegistrar, Re
     /**
      * 基本包属性名称
      */
-    private static final String BASE_PACKAGE_ATTRIBUTE_NAME = "baskPackage";
+    private static final String BASE_PACKAGE_ATTRIBUTE_NAME = "basePackage";
 
     private ResourceLoader resourceLoader;
 

@@ -1,5 +1,7 @@
 package com.dezhi.simple.registry;
 
+import com.dezhi.common.extension.SPI;
+
 import java.net.InetSocketAddress;
 
 /**
@@ -7,6 +9,7 @@ import java.net.InetSocketAddress;
  * @author liaodezhi
  * @date 2023/1/30
  */
+@SPI
 public interface ServiceRegistry {
 
     /**

@@ -226,24 +226,24 @@ public class ExtensionLoader<T> {
                 if (ci >= 0) {
                     line = line.substring(0, ci);
                 }
-            }
-            // 去除空格
-            line = line.trim();
-            //
-            if (line.length() > 0) {
-                try {
-                    // 提取clazzName
-                    final int ei = line.indexOf('=');
-                    String name = line.substring(0, ei).trim();
-                    String clazzName = line.substring(ei + 1).trim();
-                    if (name.length() > 0 && clazzName.length() > 0) {
-                        // 加载类
-                        Class<?> clazz = classLoader.loadClass(clazzName);
-                        // 并且存入extensionClasses中
-                        extensionClasses.put(name, clazz);
+                // 去除空格
+                line = line.trim();
+                //
+                if (line.length() > 0) {
+                    try {
+                        // 提取clazzName
+                        final int ei = line.indexOf('=');
+                        String name = line.substring(0, ei).trim();
+                        String clazzName = line.substring(ei + 1).trim();
+                        if (name.length() > 0 && clazzName.length() > 0) {
+                            // 加载类
+                            Class<?> clazz = classLoader.loadClass(clazzName);
+                            // 并且存入extensionClasses中
+                            extensionClasses.put(name, clazz);
+                        }
+                    } catch (ClassNotFoundException e) {
+                        log.error(e.getMessage());
                     }
-                } catch (ClassNotFoundException e) {
-                    log.error(e.getMessage());
                 }
             }
         } catch (IOException e) {

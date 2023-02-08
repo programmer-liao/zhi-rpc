@@ -1,7 +1,6 @@
 package com.dezhi.simple.compress.gzip;
 
 import com.dezhi.simple.compress.Compress;
-import jdk.nashorn.internal.ir.CallNode;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;

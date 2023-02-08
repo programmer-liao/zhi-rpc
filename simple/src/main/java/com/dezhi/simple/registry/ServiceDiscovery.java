@@ -1,5 +1,6 @@
 package com.dezhi.simple.registry;
 
+import com.dezhi.common.extension.SPI;
 import com.dezhi.simple.remoting.dto.RpcRequest;
 
 import java.net.InetSocketAddress;
@@ -9,6 +10,7 @@ import java.net.InetSocketAddress;
  * @author liaodezhi
  * @date 2023/1/30
  */
+@SPI
 public interface ServiceDiscovery {
     /**
      * 通过rpcRequest发现服务地址

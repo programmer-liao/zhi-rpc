@@ -41,7 +41,7 @@ public class CuratorUtils {
     /**
      * 服务注册根路径
      */
-    public static final String ZK_RESISTER_ROOT_PATH = "zhi-rpc";
+    public static final String ZK_RESISTER_ROOT_PATH = "/zhi-rpc";
 
     /**
      * 服务地址Map

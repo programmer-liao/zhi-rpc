@@ -10,7 +10,7 @@ import lombok.extern.slf4j.Slf4j;
  * @date 2023/2/7
  */
 @Slf4j
-@RpcService
+@RpcService(group = "test1", version = "version1")
 public class HelloServiceImpl implements HelloService {
 
     static {

@@ -43,7 +43,7 @@ public class RpcMessageEncoder extends MessageToByteEncoder<RpcMessage> {
         // 解压缩类型
         out.writeByte(CompressTypeEnum.GZIP.getCode());
         // 版本号
-        out.writeByte(ATOMIC_INTEGER.getAndIncrement());
+        out.writeInt(ATOMIC_INTEGER.getAndIncrement());
         // 获取full length
         byte[] bodyBytes = null;
         int fullLength = RpcConstants.HEAD_LENGTH;

@@ -1,10 +1,13 @@
 package com.dezhi.simple.compress;
 
+import com.dezhi.common.extension.SPI;
+
 /**
  * 编解码器接口
  * @author liaodezhi
  * @date 2023/2/3
  */
+@SPI
 public interface Compress {
 
     /**

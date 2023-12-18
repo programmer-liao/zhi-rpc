@@ -9,11 +9,11 @@
     <version>1.0.0</version>
     <packaging>pom</packaging>
     <modules>
-        <module>server</module>
-        <module>client</module>
-        <module>api</module>
-        <module>common</module>
-        <module>simple</module>
+        <module>zhi-rpc-server</module>
+        <module>zhi-rpc-client</module>
+        <module>zhi-rpc-api</module>
+        <module>zhi-rpc-common</module>
+        <module>zhi-rpc-simple</module>
     </modules>
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -90,7 +90,7 @@
             <artifactId>netty-all</artifactId>
             <version>${netty.version}</version>
         </dependency>
-        <!-- kyro -->
+        <!-- kryo -->
         <dependency>
             <groupId>com.esotericsoftware</groupId>
             <artifactId>kryo</artifactId>

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
-    <file url="file://$PROJECT_DIR$/api/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/api/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/client/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/client/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/common/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/common/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/server/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/server/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/simple/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/simple/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zhi-rpc-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zhi-rpc-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zhi-rpc-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zhi-rpc-client/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zhi-rpc-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zhi-rpc-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zhi-rpc-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zhi-rpc-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zhi-rpc-simple/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zhi-rpc-simple/src/main/resources" charset="UTF-8" />
   </component>
 </project>

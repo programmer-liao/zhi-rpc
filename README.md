@@ -1,4 +1,4 @@
-## 项目介绍
+## 1. 项目介绍
 
 zhi-rpc是一款基于Java、Netty、Zookeeper实现的RPC通信框架，它具有以下核心特性：
 
@@ -10,15 +10,15 @@ zhi-rpc是一款基于Java、Netty、Zookeeper实现的RPC通信框架，它具�
 
 4. 通过自定义通信协议、支持多种序列化方式，同时实现Gzip压缩，提升网络传输效率
 
-## 基本原理
+## 2. 基本原理
 
 ![image-20240307225720560](assets/img1.png)
 
-## 项目架构
+## 3. 项目架构
 
 ![image-20240308000226475](assets/img2.png)
 
-## 目录结构
+## 4. 目录结构
 
 ```bash
 zhi-rpc
@@ -29,7 +29,7 @@ zhi-rpc
 ├── zhi-rpc-simple   // 核心模块
 ```
 
-## 快速开始
+## 5. 快速开始
 
 1. 接口定义（参考`zhi-rpc-api` 模块）：
 

@@ -29,5 +29,87 @@ zhi-rpc
 ├── zhi-rpc-simple	 // 核心模块
 ```
 
+## 快速开始
 
+1. 接口定义（参考`zhi-rpc-api` 模块）：
+
+   ```Java
+   public interface HelloService {
+   	String hello(Hello hello);
+   }
+   
+   public class Hello implements Serializable {
+       private String message;
+       private String description;
+   }
+   ```
+
+2. 接口实现（参考`zhi-rpc-server`模块）：
+
+   ```Java
+   @Slf4j
+   @RpcService(group = "test1", version = "version1")
+   public class HelloServiceImpl implements HelloService {
+   
+       static {
+           System.out.println("HelloServiceImpl被创建");
+       }
+   
+       @Override
+       public String hello(Hello hello) {
+           log.info("HelloServiceImpl收到: {}", hello.getMessage());
+           String result = "Hello description = " + hello.getDescription();
+           log.info("HelloServiceImpl返回: {}", result);
+           return result;
+       }
+   }
+   ```
+
+3. 服务注册（参考`zhi-rpc-server`模块）：
+
+   ```Java
+   @RpcScan(basePackage = {"com.dezhi"})
+   public class NettyServerMain {
+       public static void main(String[] args) {
+           AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(NettyServerMain.class);
+           NettyRpcServer nettyRpcServer = (NettyRpcServer) applicationContext.getBean("nettyRpcServer");
+           HelloServiceImpl2 helloService2 = new HelloServiceImpl2();
+           RpcServiceConfig rpcServiceConfig = RpcServiceConfig.builder()
+                   .group("test2")
+                   .version("version2")
+                   .service(helloService2).build();
+           nettyRpcServer.registerService(rpcServiceConfig);
+           nettyRpcServer.start();
+       }
+   }
+   ```
+
+   4. 服务调用（参考`zhi-rpc-client`模块）：
+
+   ```Java
+   @Component
+   public class HelloController {
+   
+       @RpcReference(version = "version1", group = "test1")
+       private HelloService helloService;
+   
+       public void test() throws InterruptedException {
+           String hello = this.helloService.hello(new Hello("111", "222"));
+           System.out.println(hello);
+       }
+   }
+   
+   @RpcScan(basePackage = "com.dezhi")
+   public class NettyClientMain {
+       public static void main(String[] args) throws InterruptedException {
+           AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(NettyClientMain.class);
+           HelloController helloController = (HelloController) applicationContext.getBean("helloController");
+           helloController.test();
+       }
+   }
+   ```
+
+   
+
+   
 

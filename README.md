@@ -26,7 +26,7 @@ zhi-rpc
 ├── zhi-rpc-client   // 客户端模块
 ├── zhi-rpc-common   // 通用模块
 ├── zhi-rpc-server   // 服务端模块
-├── zhi-rpc-simple	 // 核心模块
+├── zhi-rpc-simple   // 核心模块
 ```
 
 ## 快速开始
@@ -84,7 +84,7 @@ zhi-rpc
    }
    ```
 
-   4. 服务调用（参考`zhi-rpc-client`模块）：
+4. 服务调用（参考`zhi-rpc-client`模块）：
 
    ```Java
    @Component
